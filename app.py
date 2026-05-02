@@ -280,6 +280,7 @@ with u2:
     use_sample = False
     if DEFAULT_SAMPLE_IMAGE.exists():
         st.write("")
+        st.write("")
         use_sample = st.button("Use Sample Image", use_container_width=True)
     else:
         st.caption("Add `assets/sample_image.jpg` to enable the sample-image button.")
@@ -341,15 +342,15 @@ if selected_image is not None:
 
     with v1:
         st.markdown("**Input Image**")
-        st.image(result.resized_input_image, use_container_width=True)
+        st.image(result.resized_input_image, use_column_width=True)
 
     with v2:
         st.markdown("**Predicted Mask**")
-        st.image(result.predicted_mask_rgb, use_container_width=True)
+        st.image(result.predicted_mask_rgb, use_column_width=True)
 
     with v3:
         st.markdown("**Overlay**")
-        st.image(result.overlay_image, use_container_width=True)
+        st.image(result.overlay_image, use_column_width=True)
 
     with v4:
         st.markdown(
